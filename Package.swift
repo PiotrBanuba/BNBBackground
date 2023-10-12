@@ -13,9 +13,9 @@ let package = Package(
             name: "BNBBackground",
             targets: [
                 "BNBBackground",
-                "BNBBackgroundBNBSdkCoreTarget",
-                "BNBBackgroundBNBEffectPlayerTarget",
-                "BNBBackgroundBNBScriptingTarget"
+                "BNBBackgroundBNBSdkCore",
+                "BNBBackgroundBNBEffectPlayer",
+                "BNBBackgroundBNBScripting"
             ]
         ),
     ],
@@ -40,7 +40,7 @@ let package = Package(
             checksum: "88a07cca081eba1d1bff8263030f4566ea3ad50cdf808f5149a28053f2ace91c"
         ),
         .target(
-            name: "BNBBackgroundBNBSdkCoreTarget",
+            name: "BNBBackgroundBNBSdkCore",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -49,7 +49,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBBackgroundBNBEffectPlayerTarget",
+            name: "BNBBackgroundBNBEffectPlayer",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -58,7 +58,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBBackgroundBNBScriptingTarget",
+            name: "BNBBackgroundBNBScripting",
             dependencies: [
                 .product(
                     name: "BNBScripting",
