@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-3"
+let bnbPackageVersion: Version = "1.8.0-4"
 
 let package = Package(
     name: "BNBBackground",
@@ -11,19 +11,12 @@ let package = Package(
     products: [
         .library(
             name: "BNBBackground",
-            targets: ["BNBBackground"]
-        ),
-        .library(
-            name: "BNBSdkCore",
-            targets: ["BNBSdkCore"]
-        ),
-        .library(
-            name: "BNBEffectPlayer",
-            targets: ["BNBEffectPlayer"]
-        ),
-        .library(
-            name: "BNBScripting",
-            targets: ["BNBScripting"]
+            targets: [
+                "BNBBackground",
+                "BNBSdkCore",
+                "BNBEffectPlayer",
+                "BNBScripting"
+            ]
         ),
     ],
     dependencies: [
