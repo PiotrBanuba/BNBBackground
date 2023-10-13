@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-14"
+let bnbPackageVersion: Version = "1.8.0-15"
 
 let package = Package(
     name: "BNBBackground",
@@ -12,10 +12,10 @@ let package = Package(
         .library(
             name: "BNBBackground",
             targets: [
-                "BNBBackground_Target",
-                "BNBBackground_BNBSdkCore_Target",
-                "BNBBackground_BNBEffectPlayer_Target",
-                "BNBBackground_BNBScripting_Target"
+                "BNBBackground",
+                "BNBBackground_BNBSdkCore",
+                "BNBBackground_BNBEffectPlayer",
+                "BNBBackground_BNBScripting"
             ]
         ),
     ],
@@ -35,12 +35,12 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "BNBBackground_Target",
+            name: "BNBBackground",
             url: "https://d2cm7wtcqqw29.cloudfront.net/1.8.0-58-g46079e7d74/BNBBackground.zip",
             checksum: "88a07cca081eba1d1bff8263030f4566ea3ad50cdf808f5149a28053f2ace91c"
         ),
         .target(
-            name: "BNBBackground_BNBSdkCore_Target",
+            name: "BNBBackgroundBNBSdkCore",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -49,7 +49,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBBackground_BNBEffectPlayer_Target",
+            name: "BNBBackgroundBNBEffectPlayer",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -58,7 +58,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBBackground_BNBScripting_Target",
+            name: "BNBBackgroundBNBScripting",
             dependencies: [
                 .product(
                     name: "BNBScripting",
